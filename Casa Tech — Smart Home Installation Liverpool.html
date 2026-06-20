@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/Mischiefing/Downloads/index_8.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Tech — Smart Home Installation Liverpool</title>
+  <link href="./Casa Tech — Smart Home Installation Liverpool_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0b0b0b;
+      --bg-alt:       #131313;
+      --card:         #1a1a1a;
+      --border:       rgba(255,255,255,0.07);
+      --border-mid:   rgba(255,255,255,0.12);
+      --gold:         #c9a84c;
+      --gold-dim:     rgba(201,168,76,0.35);
+      --gold-glow:    rgba(201,168,76,0.08);
+      --cream:        #ede4ce;
+      --body:         rgba(255,255,255,0.55);
+      --muted:        rgba(255,255,255,0.32);
+      --white:        #f2f0eb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 56px;
+      background: rgba(11,11,11,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      color: var(--cream);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--gold); }
+
+    .nav-center {
+      display: flex;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px;
+    }
+    .nav-center a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .nav-center a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+
+    .nav-tel {
+      font-size: 14px;
+      color: var(--cream);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-tel:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--bg);
+      padding: 10px 22px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--cream); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    /* IMAGE SWAP 1: Hero background — replace this URL */
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('landing.webp');
+      background-size: cover;
+      background-position: center 30%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(11,11,11,0.96) 0%,
+        rgba(11,11,11,0.85) 38%,
+        rgba(11,11,11,0.35) 65%,
+        rgba(11,11,11,0.05) 100%
+      );
+    }
+
+    .hero-pill {
+      position: absolute;
+      top: 120px; right: 56px;
+      background: rgba(20,20,20,0.72);
+      border: 1px solid var(--border-mid);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 100px;
+      padding: 10px 18px 10px 13px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      color: var(--white);
+    }
+    .pill-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.75); }
+    }
+
+    .hero-inner {
+      position: relative;
+      width: 100%;
+      padding: 0 56px 96px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-content { max-width: 620px; }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(56px, 7.5vw, 108px);
+      font-weight: 300;
+      line-height: 0.95;
+      color: var(--cream);
+      margin-bottom: 32px;
+    }
+    .hero-headline em { font-style: italic; color: var(--gold); }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--body);
+      max-width: 420px;
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--bg);
+      padding: 14px 30px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 100px;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-primary:hover { background: var(--cream); }
+
+    .btn-arrow {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .btn-ghost {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-mid);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--white); }
+
+    .hero-cards { display: flex; flex-direction: column; gap: 14px; flex-shrink: 0; }
+
+    .hero-glass-card {
+      background: rgba(20,20,20,0.72);
+      border: 1px solid var(--border-mid);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 22px 26px;
+      border-radius: 16px;
+      min-width: 190px;
+    }
+    .hero-glass-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-glass-label { font-size: 12px; color: var(--body); line-height: 1.5; }
+
+    /* ── MARQUEE ── */
+    .marquee-strip {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      background: var(--bg-alt);
+    }
+    .marquee-inner {
+      display: flex;
+      animation: marquee 28s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 0 36px;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      border-right: 1px solid var(--border);
+    }
+    .marquee-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── ABOUT SPLIT ── */
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 580px;
+    }
+
+    /* IMAGE SWAP 2: About section image — replace this URL */
+    .split-img {
+      background-image: url('ring_camera.webp');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .split-content {
+      padding: 96px 72px;
+      background: var(--bg-alt);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ── SHARED SECTION LABELS ── */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .section-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 3.5vw, 52px);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+    .section-body {
+      font-size: 15px;
+      color: var(--body);
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+    .check-list li::before {
+      content: '';
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-dim);
+      background: var(--gold-glow);
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* ── DEVICES ── */
+    .devices-section { padding: 120px 56px; background: var(--bg); }
+
+    .devices-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+    }
+
+    .devices-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .device-card {
+      background: var(--bg-alt);
+      padding: 40px 36px;
+      position: relative;
+      transition: background 0.25s;
+    }
+    .device-card:hover { background: var(--card); }
+    .device-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .device-card:hover::after { transform: scaleX(1); }
+
+    .device-icon {
+      width: 32px; height: 32px;
+      margin-bottom: 20px;
+      display: block;
+      color: var(--gold);
+      opacity: 0.8;
+    }
+    .device-icon svg { width: 100%; height: 100%; }
+
+    .device-name { font-size: 15px; color: var(--white); font-weight: 400; margin-bottom: 8px; }
+    .device-desc { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    .devices-footer {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .devices-footer-text {
+      font-size: 14px;
+      color: var(--body);
+      line-height: 1.8;
+      max-width: 620px;
+    }
+    .devices-footer-text a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 1px;
+      transition: opacity 0.2s;
+    }
+    .devices-footer-text a:hover { opacity: 0.7; }
+
+    /* ── SERVICES ── */
+    .services-section { padding: 120px 56px; background: var(--bg-alt); }
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 44px;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+    .service-card:hover { border-color: var(--gold-dim); }
+    .service-card.featured { border-color: var(--gold-dim); }
+
+    .service-badge {
+      position: absolute;
+      top: 22px; right: 22px;
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      font-weight: 500;
+      border-radius: 100px;
+    }
+
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .service-price { font-size: 13px; color: var(--gold); margin-bottom: 18px; }
+    .service-desc { font-size: 13px; color: var(--body); margin-bottom: 24px; line-height: 1.8; }
+
+    .service-includes { list-style: none; }
+    .service-includes li {
+      font-size: 13px;
+      color: var(--body);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-includes li:last-child { border-bottom: none; }
+    .service-includes li::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .add-on-row { display: flex; gap: 14px; margin-top: 18px; }
+    .add-on {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .add-on-name { font-size: 13px; color: var(--white); }
+    .add-on-price { font-size: 13px; color: var(--gold); white-space: nowrap; }
+
+    /* ── IMAGE BREAK ── */
+    /* IMAGE SWAP 3: Mid-page image — replace this URL */
+    .img-break {
+      height: 460px;
+      background-image: url('parallax_break.webp');
+      background-size: cover;
+      background-position: center 40%;
+      background-attachment: fixed;
+      position: relative;
+    }
+    .img-break-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11,11,11,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-break-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 54px);
+      font-weight: 300;
+      color: var(--cream);
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .img-break-text em { color: var(--gold); font-style: italic; }
+
+    /* ── AREA ── */
+    .area-section {
+      padding: 120px 56px;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .area-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 32px; }
+    .area-tag {
+      border: 1px solid var(--border-mid);
+      padding: 7px 16px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .area-tag:hover { border-color: var(--gold-dim); color: var(--white); }
+
+    .area-note { margin-top: 26px; font-size: 13px; color: var(--muted); font-style: italic; line-height: 1.8; }
+    .area-note a { color: var(--gold); text-decoration: none; }
+
+    /* IMAGE SWAP 4: Area section image — replace src on the <img> tag below */
+    .area-img-wrap {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 480px;
+    }
+    .area-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.7);
+    }
+    .area-img-glass {
+      position: absolute;
+      bottom: 24px; left: 24px; right: 24px;
+      background: rgba(12,12,12,0.72);
+      border: 1px solid var(--border-mid);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 12px;
+      padding: 22px 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .area-stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .area-stat-label { font-size: 12px; color: var(--body); margin-top: 4px; }
+
+    /* ── CONTACT ── */
+    .contact-section { padding: 120px 56px; background: var(--bg-alt); border-top: 1px solid var(--border); }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: start;
+    }
+
+    .contact-methods { margin-top: 44px; display: flex; flex-direction: column; }
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-method:first-child { border-top: 1px solid var(--border); }
+    .contact-method:hover { opacity: 0.6; }
+
+    .contact-method-icon {
+      width: 42px; height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+      background: var(--card);
+    }
+    .contact-method-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .contact-method-value { font-size: 15px; color: var(--white); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-field { display: flex; flex-direction: column; gap: 7px; }
+    .form-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+    .form-input, .form-select, .form-textarea {
+      background: var(--card);
+      border: 1px solid var(--border-mid);
+      color: var(--white);
+      padding: 13px 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      border-radius: 6px;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold-dim); }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
+    .form-select { appearance: none; cursor: pointer; }
+    .form-textarea { resize: vertical; min-height: 116px; }
+
+    .form-submit {
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      padding: 15px 34px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-start;
+      border-radius: 100px;
+    }
+    .form-submit:hover { background: var(--cream); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 36px 56px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 19px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); }
+    .footer-logo span { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 18px 24px; }
+      .nav-center, .nav-tel { display: none; }
+      .hero-inner { padding: 0 24px 64px; flex-direction: column; align-items: flex-start; }
+      .hero-cards { flex-direction: row; }
+      .hero-pill { display: none; }
+      .split-section { grid-template-columns: 1fr; }
+      .split-img { height: 320px; }
+      .split-content { padding: 56px 24px; }
+      .devices-section, .services-section, .contact-section { padding: 72px 24px; }
+      .devices-header, .services-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .devices-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .add-on-row { flex-direction: column; }
+      .area-section { grid-template-columns: 1fr; padding: 72px 24px; gap: 48px; }
+      .area-img-wrap { height: 320px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 24px; }
+      .img-break { background-attachment: scroll; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#" class="nav-logo">Casa<span>Tech</span></a>
+    <div class="nav-center">
+      <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#devices">Devices</a>
+      <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#services">Services</a>
+      <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#area">Coverage</a>
+      <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+447549600364" class="nav-tel">+44 7549 600 364</a>
+      <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#contact" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pill">
+      <div class="pill-dot"></div>
+      Now booking in Liverpool &amp; Merseyside
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Smart Home Installation · Liverpool &amp; Merseyside</p>
+        <h1 class="hero-headline">Your home,<br><em>intelligently</em><br>arranged.</h1>
+        <p class="hero-sub">We fit, configure, and connect your smart home devices — so everything works from day one, and you actually know how to use it.</p>
+        <div class="hero-actions">
+          <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#contact" class="btn-primary">Book an Installation <span class="btn-arrow">↗</span></a>
+          <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#services" class="btn-ghost">View Services</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-glass-card">
+          <div class="hero-glass-value">£49</div>
+          <div class="hero-glass-label">Starting price for<br>single device install</div>
+        </div>
+        <div class="hero-glass-card">
+          <div class="hero-glass-value">9</div>
+          <div class="hero-glass-label">Areas covered across<br>Liverpool &amp; Merseyside</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <div class="marquee-item"><div class="marquee-dot"></div>Video Doorbells</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Thermostats</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Security Cameras</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Lighting</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Home Automation</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Speakers</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Supply &amp; Install</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Liverpool &amp; Merseyside</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Video Doorbells</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Thermostats</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Security Cameras</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Lighting</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Home Automation</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Smart Speakers</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Supply &amp; Install</div>
+      <div class="marquee-item"><div class="marquee-dot"></div>Liverpool &amp; Merseyside</div>
+    </div>
+  </div>
+
+  <!-- ABOUT SPLIT -->
+  <section class="split-section">
+    <div class="split-img"><!-- IMAGE SWAP 2: change background-image URL in CSS (.split-img) --></div>
+    <div class="split-content">
+      <div class="section-label">What we do</div>
+      <h2 class="section-headline">Technology that<br>stays out of the way.</h2>
+      <p class="section-body">We're a Liverpool-based smart home installation service. We come to you, set everything up properly, and make sure you know how to use it before we leave. No jargon. No loose ends.</p>
+      <ul class="check-list">
+        <li>Devices installed and fully configured</li>
+        <li>Apps set up on your phone</li>
+        <li>Everything connected and tested</li>
+        <li>A full walkthrough before we go</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DEVICES -->
+  <section class="devices-section" id="devices">
+    <div class="devices-header">
+      <div>
+        <div class="section-label">What we install</div>
+        <h2 class="section-headline">Every device.<br>Properly set up.</h2>
+      </div>
+      <p style="color:var(--muted);font-size:13px;max-width:260px;line-height:1.8;">From a single doorbell to a full home setup — we handle the lot.</p>
+    </div>
+    <div class="devices-grid">
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></span>
+        <div class="device-name">Video Doorbells</div>
+        <div class="device-desc">Ring, Nest, Eufy and more. Wired or battery, mounted and connected to your phone.</div>
+      </div>
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><circle cx="12" cy="13.5" r="2.5"></circle></svg></span>
+        <div class="device-name">Security Cameras</div>
+        <div class="device-desc">Indoor and outdoor cameras, positioned and configured for the best coverage.</div>
+      </div>
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg></span>
+        <div class="device-name">Smart Thermostats</div>
+        <div class="device-desc">Hive, Nest, and Tado. Save energy and control your heating from anywhere.</div>
+      </div>
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg></span>
+        <div class="device-name">Smart Lighting</div>
+        <div class="device-desc">Philips Hue, LIFX, and smart switches. Scenes, schedules, and automations sorted.</div>
+      </div>
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 6h4M10 10h4M10 14h4"></path><circle cx="12" cy="19" r="1"></circle></svg></span>
+        <div class="device-name">Smart Plugs &amp; Speakers</div>
+        <div class="device-desc">Amazon Echo, Google Home, smart plugs — set up and added to your home ecosystem.</div>
+      </div>
+      <div class="device-card">
+        <span class="device-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+        <div class="device-name">Home Automation</div>
+        <div class="device-desc">Devices that talk to each other. Routines that just work. Your home, on your terms.</div>
+      </div>
+    </div>
+    <div class="devices-footer">
+      <p class="devices-footer-text">Don't see what you're after? We work with a wide range of smart home devices and brands. <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#contact">Get in touch</a> and we'll let you know if we can help — or point you in the right direction.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-header">
+      <div>
+        <div class="section-label">Pricing</div>
+        <h2 class="section-headline">Simple, honest pricing.</h2>
+      </div>
+      <p style="color:var(--muted);font-size:13px;max-width:260px;line-height:1.8;">All prices starting from. Final quote confirmed before any work begins.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-name">Single Device Installation</div>
+        <div class="service-price">From £49 &nbsp;·&nbsp; You supply the device</div>
+        <div class="service-desc">One device, properly installed, configured, and demonstrated. You bring it, we make it work.</div>
+        <ul class="service-includes">
+          <li>Device installation</li>
+          <li>App setup &amp; Wi-Fi connection</li>
+          <li>Testing and live demonstration</li>
+          <li>Ring, Nest, cameras, speakers, plugs, lighting, wireless thermostats</li>
+        </ul>
+      </div>
+      <div class="service-card featured">
+        <div class="service-badge">Most Popular</div>
+        <div class="service-name">Multi-Device Setup</div>
+        <div class="service-price">From £99 &nbsp;·&nbsp; 2–5 devices</div>
+        <div class="service-desc">Multiple devices installed, paired, and automated in a single visit.</div>
+        <ul class="service-includes">
+          <li>Full setup &amp; installation</li>
+          <li>Device pairing &amp; linking</li>
+          <li>Basic automation setup</li>
+          <li>Full customer walkthrough</li>
+          <li>Doorbells, cameras, lighting, plugs &amp; ecosystems</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Whole Home Smart Setup</div>
+        <div class="service-price">From £199 &nbsp;·&nbsp; 6+ devices</div>
+        <div class="service-desc">The complete upgrade. Ideal for new homeowners or anyone ready to do it properly.</div>
+        <ul class="service-includes">
+          <li>Pre-visit consultation</li>
+          <li>Full device installation</li>
+          <li>App configuration</li>
+          <li>Automation &amp; routine setup</li>
+          <li>Training &amp; ongoing support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Supply &amp; Install</div>
+        <div class="service-price">Tailored quote &nbsp;·&nbsp; We source the device</div>
+        <div class="service-desc">Not sure what to buy? We recommend the right kit, supply it, and install it — all in one.</div>
+        <ul class="service-includes">
+          <li>Ring Battery Doorbell + install &nbsp;<span style="color:var(--gold)">from £129</span></li>
+          <li>Smart Indoor Camera + install &nbsp;<span style="color:var(--gold)">from £99</span></li>
+          <li>Smart Thermostat + install &nbsp;<span style="color:var(--gold)">from £179</span></li>
+          <li>Starter Pack (doorbell, speaker, plugs) &nbsp;<span style="color:var(--gold)">from £249</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="add-on-row">
+      <div class="add-on">
+        <span class="add-on-name">Additional Device During Same Visit</span>
+        <span class="add-on-price">From £20</span>
+      </div>
+      <div class="add-on">
+        <span class="add-on-name">Wi-Fi &amp; Connectivity Assistance</span>
+        <span class="add-on-price">From £59</span>
+      </div>
+      <div class="add-on">
+        <span class="add-on-name">Home Technology Consultation</span>
+        <span class="add-on-price">Free with any installation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK -->
+  <div class="img-break">
+    <!-- IMAGE SWAP 3: change background-image URL in CSS (.img-break) -->
+    <div class="img-break-overlay">
+      <p class="img-break-text">"Your home, working<br><em>exactly</em> as it should."</p>
+    </div>
+  </div>
+
+  <!-- AREA -->
+  <section class="area-section" id="area">
+    <div>
+      <div class="section-label">Coverage</div>
+      <h2 class="section-headline">Based in Liverpool.<br>Here when you need us.</h2>
+      <p class="section-body">We cover a growing patch across Liverpool and Merseyside. If you're nearby and unsure, just ask.</p>
+      <div class="area-tags">
+        <span class="area-tag">Liverpool City Centre</span>
+        <span class="area-tag">Aigburth</span>
+        <span class="area-tag">Allerton</span>
+        <span class="area-tag">Woolton</span>
+        <span class="area-tag">Childwall</span>
+        <span class="area-tag">Crosby</span>
+        <span class="area-tag">Formby</span>
+        <span class="area-tag">Huyton</span>
+        <span class="area-tag">Prescot</span>
+      </div>
+      <p class="area-note">Not sure if you're included? <a href="file:///C:/Users/Mischiefing/Downloads/index_8.html#contact">Get in touch</a> — we're always looking to expand.</p>
+    </div>
+    <div class="area-img-wrap">
+      <!-- IMAGE SWAP 4: replace the src below with your own image -->
+      <img src="file:///C:/Users/Mischiefing/Downloads/coverage.webp" alt="Modern home exterior with Ring doorbell">
+      <div class="area-img-glass">
+        <div>
+          <div class="area-stat-value">9</div>
+          <div class="area-stat-label">Areas covered</div>
+        </div>
+        <div>
+          <div class="area-stat-value">£49</div>
+          <div class="area-stat-label">Starting from</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-headline">Ready to get<br>your home sorted?</h2>
+        <p class="section-body">Call or email us directly, or fill in the form and we'll get back to you shortly.</p>
+        <div class="contact-methods">
+          <a href="tel:+447549600364" class="contact-method">
+            <div class="contact-method-icon">📞</div>
+            <div>
+              <div class="contact-method-label">Phone</div>
+              <div class="contact-method-value">+44 7549 600 364</div>
+            </div>
+          </a>
+          <a href="mailto:enquiries@casatech.co.uk" class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">enquiries@casatech.co.uk</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label">First Name</label>
+            <input class="form-input" type="text" placeholder="Jane">
+          </div>
+          <div class="form-field">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Email</label>
+          <input class="form-input" type="email" placeholder="jane@example.com">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Phone (optional)</label>
+          <input class="form-input" type="tel" placeholder="+44 7700 000000">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Service Interested In</label>
+          <select class="form-select form-input">
+            <option value="">Select a service...</option>
+            <option>Single Device Installation</option>
+            <option>Multi-Device Setup</option>
+            <option>Whole Home Smart Setup</option>
+            <option>Supply &amp; Install</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell us about what you&#39;re looking to set up, your area, and any questions you have..."></textarea>
+        </div>
+        <button class="form-submit">Send Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Casa<span>Tech</span></div>
+    <div class="footer-copy">© 2026 Casa Tech · Liverpool &amp; Merseyside · enquiries@casatech.co.uk</div>
+  </footer>
+
+
+
+</body></html>
